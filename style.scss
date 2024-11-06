@@ -24,8 +24,25 @@ body {
   margin: $size-0;
   padding: $size-0;
   color: $font;
-  header{
-    display: flex;
+  header{ 
+    padding-bottom: 0;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    } img  {
+        max-width: 5%;
+        padding-block: 1px;
+}
+    }
+    .centrale {
+        align-content: center;
+    } a {
+        padding-inline:$size-6;
+        text-decoration: none;
+        color:$bg_hero;
+    }
+
   }
 
 main {
@@ -36,13 +53,33 @@ main {
     section {
         padding-top:0;
     }
+    .ciao {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    } p {
+      
+        padding:$size-1;
+         margin-right: 300px;
+    } img {
+        box-shadow:0px 20px 50px black;
+        border-radius: 100px;
+    }
+    .bottoni{
+        text-align: center;
+    }
+    .container {
+        display: flex;
+    justify-content: space-between;
+    }
 }
 @mixin myH1($size-5: 10px, $radius:5px, $bg_hero:black ){
 
     font-size: $size-6;
-    margin-block: $size-5;
+    margin-block: $size-0;
     border-radius: $radius;
     color: $bg_hero;
+    text-align: center
 
 }
      h1 {
@@ -51,11 +88,10 @@ main {
       %reset-button {
     border: none;
     background-color: transparent;
-       }
-       button {
-    @extend %reset-button;
-        }
+    font-weight: 700;
 
+       }
+     
   .btn {
     &:first-of-type { 
     background-color: #0e6cff;
@@ -67,9 +103,33 @@ main {
       weight: 500;
     }
     border: 1px solid rgb(42, 42, 42);
-    border-radius: 6px;
-   }}
-}
+ }
+    &:nth-of-type(2) { 
+            background-color: #ff8700;
+            color: white;
+            padding: $size-1 $size-3;
+            font: {
+                size: 1.2rem;
+                family: inherit;
+                weight: 500;
+              }
+              border: 1px solid rgb(42, 42, 42);
+
+
+    } &:last-of-type { 
+        background-color: #4caf50;
+        color: white;
+        padding: $size-1 $size-3;
+        font: {
+            size: 1.2rem;
+            family: inherit;
+            weight: 500;
+          }
+          border: 1px solid rgb(42, 42, 42);
+
+}}
+    
+
 
 
   
