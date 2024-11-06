@@ -1,0 +1,77 @@
+$size-0: 0;
+$size-1: 0.25rem;
+$size-2: 0.5rem;
+$size-3: 1rem;
+$size-4: 1.5rem;
+$size-5: 3rem;
+$size-6: 60px;
+
+$main-color: rgb(189, 108, 189);
+$bg_hero: #640fc5;
+
+
+$font-serif: Georgia, "Times New Roman", Times, serif;
+$font : #f4f4f4;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-serif;
+  margin: $size-0;
+  padding: $size-0;
+  color: $font;
+  header{
+    display: flex;
+  }
+
+main {
+
+    .hero {
+        background-color: $bg_hero;
+    }
+    section {
+        padding-top:0;
+    }
+}
+@mixin myH1($size-5: 10px, $radius:5px, $bg_hero:black ){
+
+    font-size: $size-6;
+    margin-block: $size-5;
+    border-radius: $radius;
+    color: $bg_hero;
+
+}
+     h1 {
+    @include myH1;
+    }
+      %reset-button {
+    border: none;
+    background-color: transparent;
+       }
+       button {
+    @extend %reset-button;
+        }
+
+  .btn {
+    &:first-of-type { 
+    background-color: #0e6cff;
+    color: white;
+    padding: $size-1 $size-3;
+    font: {
+      size: 1.2rem;
+      family: inherit;
+      weight: 500;
+    }
+    border: 1px solid rgb(42, 42, 42);
+    border-radius: 6px;
+   }}
+}
+
+
+  
+
+
