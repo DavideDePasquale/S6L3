@@ -12,6 +12,7 @@ body {
 }
 body header {
   padding-bottom: 0;
+  background-image: radial-gradient(circle at center center, transparent, rgb(255, 255, 255)), repeating-linear-gradient(135deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 12px, transparent 12px, transparent 19px, rgb(255, 255, 255) 19px, rgb(255, 255, 255) 24px, transparent 24px, transparent 28px), repeating-linear-gradient(45deg, rgb(245, 245, 245) 0px, rgb(245, 245, 245) 7px, transparent 7px, transparent 14px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 body header nav {
   display: flex;
@@ -27,34 +28,63 @@ body .centrale {
 body a {
   padding-inline: 60px;
   text-decoration: none;
-  color: #640fc5;
+  color: black;
+}
+body a:hover {
+  color: red;
 }
 
+main {
+  padding-inline: 10px;
+  background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(90deg, rgb(195, 195, 195), rgb(228, 228, 228));
+}
 main .hero {
-  background-color: #640fc5;
+  display: flex;
+  flex-direction: flex-start;
+  gap: 40px;
+}
+main .hero img {
+  box-shadow: 1px 10px 10px black;
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
 }
 main section {
   padding-top: 0;
 }
-main .ciao {
+main .content {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  box-shadow: 10px 0px 50px white;
+  margin-bottom: 20px;
 }
 main p {
   padding: 0.25rem;
-  margin-right: 300px;
+  color: #ffffff;
 }
 main img {
-  box-shadow: 0px 100px 200px #640fc5 41.568627451%;
-  border-radius: 5px;
+  box-shadow: 0px 0px 10px #640fc5;
+  border-radius: 7px;
 }
 main .bottoni {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 main .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .container img {
+  width: 23%;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -63,32 +93,47 @@ h1 {
   border-radius: 5px;
   color: black;
   text-align: center;
+  padding-inline: 20px;
 }
 
 .btn:first-of-type {
-  background-color: #0e6cff;
-  color: white;
+  background-color: #fdfdfd;
+  color: rgb(5, 5, 5);
   padding: 0.25rem 1rem;
+  box-shadow: 1px 0px 6px #ffffff;
+  cursor: pointer;
+  transition: transform 0.1s;
   font-size: 1.2rem;
   font-family: inherit;
   font-weight: 500;
   border: 1px solid rgb(42, 42, 42);
 }
 .btn:nth-of-type(2) {
-  background-color: #ff8700;
+  background-color: #070606;
   color: white;
   padding: 0.25rem 1rem;
+  box-shadow: 1px 0px 6px #000;
+  cursor: pointer;
+  transition: transform 0.1s;
   font-size: 1.2rem;
   font-family: inherit;
   font-weight: 500;
   border: 1px solid rgb(42, 42, 42);
 }
 .btn:last-of-type {
-  background-color: #4caf50;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(5, 5, 5);
   padding: 0.25rem 1rem;
+  box-shadow: 1px 0px 6px #ffffff;
+  cursor: pointer;
+  transition: transform 0.1s;
   font-size: 1.2rem;
   font-family: inherit;
   font-weight: 500;
   border: 1px solid rgb(42, 42, 42);
+}
+
+.btn:hover {
+  background-color: gray;
+  transform: scale(1.05);
 }/*# sourceMappingURL=style.css.map */
